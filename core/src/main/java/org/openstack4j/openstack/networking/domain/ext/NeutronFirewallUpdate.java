@@ -74,7 +74,7 @@ public class NeutronFirewallUpdate implements FirewallUpdate {
 	public Boolean isShared() {
 		return shared != null && shared;
 	}
-
+	
 	@Override
 	public String getPolicy() {
 		return policyId;
@@ -140,7 +140,7 @@ public class NeutronFirewallUpdate implements FirewallUpdate {
 			f.shared = shared;
 			return this;
 		}
-
+		@JsonIgnore
 		@Override
 		public FirewallUpdateBuilder policy(String policyId) {
 			f.policyId = policyId;
